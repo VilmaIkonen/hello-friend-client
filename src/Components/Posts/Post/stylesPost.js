@@ -25,13 +25,17 @@ export default makeStyles({
     position: 'absolute',
     top: '1rem',
     left: '1rem',
-    color: COLORS.colorTextSecondary
+    fontWeight:'bold',
+    color: COLORS.colorTextSecondary,
+    mixBlendMode: 'difference'  
   },
   overlay2: {
     position: 'absolute',
     top: '1rem',
     right: '1rem',
-    color: COLORS.colorTextSecondary    
+    color: COLORS.colorTextSecondary,
+    fontWeight:'bold',
+    mixBlendMode: 'difference'  
   },
   grid: {
     display: 'flex'
