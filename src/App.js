@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
-
 import { getPosts } from './actions/posts'
-import Teddy from './images/Teddy.png';
+
 import Posts from './Components/Posts/Posts';
 import Form from './Components/Form/Form';
 import useStyles from './stylesApp'
@@ -29,8 +28,7 @@ const App = () => {
     <Container maxwidth="lg">
       <AppBar className={classes.appBar} position="static" color="inherit">
         <Typography className={classes.heading} variant="h1" align="center">Hello Friend!</Typography>
-        {/* <img className={classes.image} src={Teddy} alt="Teddy" height="60"/> */}
-      </AppBar>
+       </AppBar>
       <Grow in>
         <Container>
           <Grid className={classes.mainContainer} container justify="space-between" alignItems="stretch" spacing="3">
