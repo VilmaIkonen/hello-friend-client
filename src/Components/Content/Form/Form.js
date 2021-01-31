@@ -4,7 +4,7 @@ import FileBase from 'react-file-base64';
 import { useDispatch, useSelector } from 'react-redux';
 
 import useStyles from './stylesForm';
-import { createPost, updatePost } from '../../actions/posts';
+import { createPost, updatePost } from '../../../actions/posts';
 
 const Form = ({currentId, setCurrentId}) => {
   

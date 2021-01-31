@@ -1,5 +1,4 @@
 import React from 'react';
-import useStyles from './stylesPost';
 import { Card, CardActions, CardContent, CardMedia, Button, Typography } from '@material-ui/core';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import DeleteIcon from '@material-ui/icons/Delete';
@@ -7,7 +6,8 @@ import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import moment from 'moment'; // To set timestamp for the post --> .fromNow --> eg. "5 minutes ago"
 import { useDispatch } from 'react-redux';
 
-import { deletePost, likePost } from '../../../actions/posts'
+import { deletePost, likePost } from '../../../../actions/posts'
+import useStyles from './stylesPost';
 
 const Post = ({post, setCurrentId}) => {
   const classes = useStyles();
