@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { TextField, Button, Typography, Paper } from '@material-ui/core';
+import { TextField, Button, Typography, Paper, Input } from '@material-ui/core';
 import FileBase from 'react-file-base64';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -13,6 +13,7 @@ const Form = ({currentId, setCurrentId}) => {
     title: '',
     message: '',
     tags: '',
+    link: '',
     selectedFile: ''    
   })
 
@@ -46,6 +47,7 @@ const Form = ({currentId, setCurrentId}) => {
       title: '',
       message: '',
       tags: '',
+      link: '',
       selectedFile: '' 
     })
   }
@@ -87,13 +89,23 @@ const Form = ({currentId, setCurrentId}) => {
           onChange={(e) => setPostData({...postData, message: e.target.value})} 
         />
         <TextField 
+          name='link' 
+          variant='outlined'
+          label='Link'
+          fullWidth
+          value={postData.link}
+          onChange={(e) => setPostData({...postData, link: e.target.value})} 
+          type='url' 
+          placeholder='https://...'       
+        />
+        <TextField 
           name='tags' 
           variant='outlined' 
           label='Tags' 
           fullWidth 
           value={postData.tags} 
           onChange={(e) => setPostData({...postData, tags: e.target.value.split(',')})}
-          helperText={errorTags ? 'Type tags w/o #, separated by comma' : ''}
+          helperText={errorTags ? 'Type tags w/o #, separated only by comma' : ''}
           error={errorTags}          
         />
         <div className={classes.fileInput}>
