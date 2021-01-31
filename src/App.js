@@ -1,6 +1,5 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Landing from './Components/Landing/Landing'
 import Content from './Components/Content/Content'
 
@@ -8,8 +7,17 @@ import Content from './Components/Content/Content'
 const App = () => {
   return (
     <Router>
-      <Landing/>
-      <Content/>
+      <div>
+        <Switch>
+          <Route path='/'>
+            <Landing/>
+          </Route>
+          <Route path='/posts'>
+            <Content/>
+          </Route>
+          <Content/>
+        </Switch>
+      </div> 
     </Router>
   );
 };
