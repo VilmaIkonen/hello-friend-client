@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Alice&family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Sacramento&display=swap');
 
 body {
-  background-color: var(--colorLightGreen);
+  background-color: #526972;
   position: relative;
-  background: url("https://source.unsplash.com/tJHU4mGSLz4") fixed center no-repeat;
   background-size: cover;
   width: 100vw;
   height: 100vh;

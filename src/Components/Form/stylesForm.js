@@ -22,15 +22,17 @@ export default makeStyles((theme) => ({
   },
   fileInput: {
     width: '92%',
-    margin: '1rem 0'
+    margin: '1rem 0',
+    fontFamily: FONTS.fontText
   },
   buttonSubmit: {
     marginBottom: 10,
     backgroundColor: COLORS.colorButtonSubmit,
-    color: COLORS.colorTextSecondary    
+    color: COLORS.colorTextSecondary 
   },
   buttonClear: {
     backgroundColor: COLORS.colorButtonClear,
-    color: COLORS.colorTextSecondary  
+    color: COLORS.colorTextSecondary,
+    fontFamily: FONTS.fontText 
   }
 }));

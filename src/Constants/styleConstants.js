@@ -1,5 +1,5 @@
 const COLORS = {
-  colorBackground: '#64808a',
+  colorBackground: '#526972a',
   colorTextPrimary: '#24252b',
   colorTextSecondary: '#cecdc3',  
   colorTextHover: '#bbbcbe',  
@@ -11,7 +11,7 @@ const COLORS = {
 
 const FONTS = {
   fontHeadingEmphasis: "'Sacramento', cursive",
-  fontText: "'Alice', serif"
-}
+  fontText: "'Open Sans', sans-serif"
+  }
 
 export { COLORS, FONTS };

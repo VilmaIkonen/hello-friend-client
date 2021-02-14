@@ -29,6 +29,9 @@ export default makeStyles({
     color: COLORS.colorTextSecondary,
     mixBlendMode: 'difference'  
   },
+  creatorCreatedEdit: {
+    fontFamily: FONTS.fontText
+  },
   overlay2: {
     position: 'absolute',
     top: '1rem',
@@ -43,14 +46,14 @@ export default makeStyles({
   details: {
     display: 'flex',
     justifyContent: 'space-between',
-    margin: '1rem',
+    margin: '1rem'
+  },
+  tagsAndMessage: {
+    fontFamily: FONTS.fontText
   },
   title: {
     padding: '0 1rem',
     fontFamily: FONTS.fontHeadingEmphasis   
-  },
-  message: {
-    fontFamily: FONTS.fontText
   },
   cardActions: {
     padding: '0 1rem .5rem 1rem',
@@ -58,6 +61,7 @@ export default makeStyles({
     justifyContent: 'space-between'
   },
   likeDeleteButton: {
-    color: COLORS.colorButton
+    color: COLORS.colorButton,
+    fontFamily: FONTS.fontText
   }
 });
