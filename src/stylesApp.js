@@ -3,6 +3,9 @@ import { COLORS, FONTS } from './Constants/styleConstants';
 
 export default makeStyles((theme) => ({
 
+  mainContainer: {
+    backgroundColor: COLORS.colorBackground,
+  },
   appBar: {
     borderRadius: 5,
     backgroundColor: COLORS.colorHeaderFooter,
@@ -17,9 +20,6 @@ export default makeStyles((theme) => ({
     fontFamily: FONTS.fontHeadingEmphasis,
     paddingTop: '1rem'  
   },
-  // image: {
-  //   marginLeft: '2rem',
-  // },
 
   // For mobile devices, moving Form on top:
   [theme.breakpoints.down('sm')]: {

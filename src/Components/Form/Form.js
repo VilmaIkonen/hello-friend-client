@@ -56,7 +56,7 @@ const Form = ({currentId, setCurrentId}) => {
     <Paper className={classes.paper}>
     {/* classes.root/classes.form --> Multiple templates w template string to get styling from MUI to both root and form (see styles.css) */}
       <form autoComplete='off' className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}> 
-        <Typography className={classes.heading}variant='h6'>{currentId ? 'Edit the' : 'Create a'} note</Typography>
+        <Typography className={classes.heading} variant='h6'>{currentId ? 'Edit the' : 'Create a'} note</Typography>
         <TextField 
           required
           name='creator' 
@@ -97,7 +97,7 @@ const Form = ({currentId, setCurrentId}) => {
           error={errorTags}          
         />
         <div className={classes.fileInput}>
-          <FileBase
+          <FileBase 
             type='file'
             multiple={false}
             onDone={({base64}) => setPostData({...postData, selectedFile: base64})}

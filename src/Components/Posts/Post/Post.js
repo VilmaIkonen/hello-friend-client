@@ -17,22 +17,21 @@ const Post = ({post, setCurrentId}) => {
     <Card className={classes.card}>
       <CardMedia className={classes.media} image={post.selectedFile} title={post.title} />
       <div className={classes.overlay}>
-        <Typography variant="h6">{post.creator}</Typography>
-        <Typography variant="body2">{moment(post.createdAt).fromNow()}</Typography>
+        <Typography className={classes.creatorCreatedEdit} variant="h6">{post.creator}</Typography>
+        <Typography className={classes.creatorCreatedEdit} variant="body2">{moment(post.createdAt).fromNow()}</Typography>
       </div>
       <div className={classes.overlay2}>
-        {/* Edit button connected to Form.js and to post update */}
-        <Button style={{color: 'white'}} size="small" onClick={() => setCurrentId(post._id)}>
+        <Button className={classes.creatorCreatedEdit} style={{color: 'white'}} size="small" onClick={() => setCurrentId(post._id)}>
           <MoreHorizIcon fontSize="default" />
           Edit
         </Button>
       </div>     
       <div className={classes.details}>
-        <Typography variant="body2">{post.tags.map((tag) => `#${tag} `)}</Typography>
+        <Typography className={classes.tagsAndMessage} variant="body2">{post.tags.map((tag) => `#${tag} `)}</Typography>
       </div>
       <Typography className={classes.title} variant="h4" gutterTop>{post.title}</Typography>    
       <CardContent>
-        <Typography className={classes.message} variant="body1" gutterBottom>{post.message}</Typography>
+        <Typography className={classes.tagsAndMessage} variant="body1" gutterBottom>{post.message}</Typography>
       </CardContent>
       <CardActions className={classes.cardActions}>
         <Button className={classes.likeDeleteButton} size="small" onClick={() => dispatch(likePost(post._id))}>
