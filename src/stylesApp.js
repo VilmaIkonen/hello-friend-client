@@ -3,9 +3,6 @@ import { COLORS, FONTS } from './Constants/styleConstants';
 
 export default makeStyles((theme) => ({
 
-  mainContainer: {
-    backgroundColor: COLORS.colorBackground,
-  },
   // For mobile devices, moving Form on top:
   [theme.breakpoints.down('sm')]: {
     mainContainer: {

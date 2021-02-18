@@ -15,7 +15,8 @@ export default makeStyles((theme) => ({
   heading: {
     color: COLORS.colorTextSecondary,
     fontFamily: FONTS.fontHeadingEmphasis,
-    paddingTop: '1rem' 
+    paddingTop: '1rem',
+    textDecoration: 'none'
   },
   toolbar: {
     display: 'flex',
