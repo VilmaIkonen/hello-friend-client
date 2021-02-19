@@ -8,7 +8,7 @@ import useStyles from './stylesAuth';
 const Auth = () => {
 
   const classes = useStyles();
-  const isSignedUp = false;
+  const [isSignedUp, setIsSignedUp] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   
   const handleShowPassword = () => setShowPassword((prevShowPassword) => !prevShowPassword); // previous state needed to toggle between states
@@ -18,6 +18,10 @@ const Auth = () => {
   }
 
   const handleChange = () => {
+
+  }
+
+  const switchMode = () => {
 
   }
 
@@ -38,7 +42,18 @@ const Auth = () => {
             )} 
             <Input name='email' label='Email address' handleChange={handleChange} type='email' />
             <Input name='password' label='Password' handleChange={handleChange} type={showPassword ? 'text' : 'password'} handleShowPassword={handleShowPassword} />
-          </Grid>     
+            {isSignedUp && <Input name='confirmPassword' label='Repeat password' handleChange={handleChange} type='password'/>}
+          </Grid> 
+          <Button type='submit' fullWidth variant='contained' className={classes.submit}>
+            {isSignedUp ? 'Sign up' : 'Sign in'}
+          </Button> 
+          <Grid container justify='flex-end'>
+            <Grid type='item'>
+              <Button onClick={switchMode}>
+                {isSignedUp ? 'Already have an account? Sign in!' : "Don't have an account yet? Sign up!" }
+              </Button>
+            </Grid>
+          </Grid>  
         </form>
       </Paper>
     </Container>

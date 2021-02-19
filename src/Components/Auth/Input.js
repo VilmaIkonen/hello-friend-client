@@ -12,7 +12,7 @@ const Input = ({name, handleChange, label, autoFocus, type, handleShowPassword, 
         variant='outlined'
         required
         fullWidth
-        lable={label}
+        label={label}
         autoFocus={autoFocus}
         type={type}
         // Icon next to password input, 'show password'
