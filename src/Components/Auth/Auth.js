@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import { Avatar, Button, Paper, Grid, Typography, Container } from '@material-ui/core';
 import LockOutLinedIcon from '@material-ui/icons/LockOutlined';
+import { GoogleLogin } from 'react-google-login';
 
 import Input from './Input';
+import Icon from './Icon'
 import useStyles from './stylesAuth';
 
 const Auth = () => {
@@ -26,6 +28,14 @@ const Auth = () => {
     handleShowPassword(false);
   }
 
+  googleSuccess = (res) => {
+    console.log(res)
+  }
+
+  googleFailure = () => {
+    console.log('Google sign in failed')
+  }
+
   return (
     <Container component='main' maxWidth='xs'>
       <Paper className={classes.paper} elevation={3}>
@@ -45,6 +55,22 @@ const Auth = () => {
             <Input name='password' label='Password' handleChange={handleChange} type={showPassword ? 'text' : 'password'} handleShowPassword={handleShowPassword} />
             {isSignedUp && <Input name='confirmPassword' label='Repeat password' handleChange={handleChange} type='password'/>}
           </Grid> 
+          <GoogleLogin 
+            clientId='GOOGLE ID' //ADD THIS!
+            render={(renderProps) => (
+              <Button 
+                className={classes.googleButton} 
+                fullWidth onClick={renderProps.onClick} 
+                disabled={renderProps.disabled} 
+                startIcon={<Icon />} 
+                variant='contained'>
+              Google sign in
+              </Button>
+            )}
+            onSuccess={googleSuccess}
+            onFailure={googleFailure}
+            cookiePolicy='single_host_origin'
+          />
           <Button type='submit' fullWidth variant='contained' className={classes.submit}>
             {isSignedUp ? 'Sign up' : 'Sign in'}
           </Button> 
